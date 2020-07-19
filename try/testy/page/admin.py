@@ -1,0 +1,5 @@
+from django.contrib import admin
+from .models import page
+
+admin.site.register(page)
+# Register your models here.

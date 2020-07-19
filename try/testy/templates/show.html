@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>cv</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/cs/bootstrap.min.css">
+</head>
+<body>
+	<div class="fullpage">
+
+	<table>
+	{% block content %}
+	{% for object in obj %}
+	<tr>
+		<tr>
+	<div class="form-group row">
+	<!--<label class="col-sm-2 col-form-label">Full Name</label>-->
+
+	<label class="col-sm-2 col-form-label">{{ object.fullname }}</label>
+	<td>
+	<div class="col-sm-4">
+
+		<!--<tr><div class="high">{{Detail.fullname}}</div></tr>-->
+	</div>
+	</td>
+</div>
+</tr>
+<tr>
+	<div class="form-group row">
+	<label class="col-sm-2 col-form-label">
+		<img src = "{{ object.image.url }}" ></label>
+	<td>
+	<div class="col-sm-4">
+	</div>
+</td>
+</div>
+	</tr>
+	{% endfor %}
+</div>
+</table>
+
+{% endblock %}
+</div>
+</body>
+</html>
